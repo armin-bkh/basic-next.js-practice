@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
@@ -8,6 +9,9 @@ export default function Home() {
   }, []);
   return (
     <main>
+      <Head>
+        <title>user list | Home</title>
+      </Head>
       <h1>Home page</h1>
       <p>this is home page guys</p>
     </main>

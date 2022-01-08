@@ -1,6 +1,12 @@
+import Head from "next/head";
+
 const Users = () => {
   return (
     <main>
+      <Head>
+        <title>user list | Users</title>
+        <meta name="keywords" content="users" />
+      </Head>
       Users page
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,

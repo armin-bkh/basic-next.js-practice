@@ -1,6 +1,11 @@
+import Head from "next/head";
+
 const About = () => {
   return (
-    <div>
+    <main>
+      <Head>
+        <title>user list | About</title>
+      </Head>
       <h1>About page</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
@@ -14,7 +19,7 @@ const About = () => {
         animi pariatur, repudiandae debitis aspernatur quibusdam quisquam.
         Architecto sapiente ut soluta.
       </p>
-    </div>
+    </main>
   );
 };
 
