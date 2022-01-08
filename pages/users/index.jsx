@@ -1,6 +1,9 @@
+import Footer from "../../components/Navbar/Footer";
+import Navbar from "../../components/Navbar/Navbar";
+
 const Users = () => {
   return (
-    <div>
+    <main>
       Users page
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
@@ -14,7 +17,7 @@ const Users = () => {
         inventore fugiat quasi vero quia, voluptates modi natus! Doloremque,
         velit!
       </p>
-    </div>
+    </main>
   );
 };
 
