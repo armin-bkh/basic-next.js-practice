@@ -1,25 +1,38 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
+import getUsers from "../../Services/getUsers";
 
-const Users = () => {
+export const getStaticProps = async () => {
+    try {
+        const { data } = await getUsers();
+        return {
+            props: {
+                users: data,
+            }
+        }
+    } catch (error) {
+        return {
+            props: {
+                error: error.message,
+            }
+        }
+        
+    }
+}
+
+const Users = ({ users, error }) => {
   return (
     <main>
       <Head>
         <title>user list | Users</title>
         <meta name="keywords" content="users" />
       </Head>
-      Users page
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
-        dicta est qui temporibus iusto laudantium odit suscipit minus iure eius,
-        inventore fugiat quasi vero quia, voluptates modi natus! Doloremque,
-        velit!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
-        dicta est qui temporibus iusto laudantium odit suscipit minus iure eius,
-        inventore fugiat quasi vero quia, voluptates modi natus! Doloremque,
-        velit!
-      </p>
+      <h1>All users</h1>
+      <div>
+          <ul>
+              {!error && users ? users.map(user => <li key={user.id}>{user.name}</li>) : <p>{error}</p>}
+          </ul>
+      </div>
     </main>
   );
 };
