@@ -1,6 +1,3 @@
-import Footer from "../../components/Navbar/Footer";
-import Navbar from "../../components/Navbar/Navbar";
-
 const Users = () => {
   return (
     <main>
