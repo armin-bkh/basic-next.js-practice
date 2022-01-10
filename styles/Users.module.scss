@@ -1,0 +1,32 @@
+.userItem {
+    margin: 10px 0;
+  a {
+    padding: 20px 35px;
+    display: block;
+  }
+  border: 2px rgba(#57534e, 0.3) solid;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s ease;
+
+  &:hover{
+    color: #fff;
+
+    &::after{
+        bottom: 0;
+    }
+  }
+
+  &::after{
+      content: '';
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#57534e, .3);
+      transition: all .5s ease;
+      z-index: -5;
+  }
+}

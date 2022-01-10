@@ -1,5 +1,6 @@
 import getUser from "../../Services/getUser";
 import getUsers from "../../Services/getUsers";
+import styles from "../../styles/UserDetail.module.scss";
 
 export const getStaticPaths = async () => {
   const { data } = await getUsers();
@@ -27,18 +28,20 @@ export const getStaticProps = async ({ params }) => {
   }
 };
 
-const User = ({user, error}) => {
+const User = ({ user, error }) => {
   return (
-    <div>
-      <h1>Detail page</h1>
-      {!error && user ? 
+    <main>
+      <h1 className="title">{user.name} Detail page</h1>
+      {!error && user ? (
         <>
-        <p>{user.name}</p>
-        <p>{user.email}</p>
-        </> :
-        <p>data fetching faild</p> 
-    }
-    </div>
+          <p className={styles.detailItem}>username: {user.username}</p>
+          <p className={styles.detailItem}>name: {user.name}</p>
+          <p className={styles.detailItem}>email: {user.email}</p>
+        </>
+      ) : (
+        <p className="title">data fetching faild</p>
+      )}
+    </main>
   );
 };
 

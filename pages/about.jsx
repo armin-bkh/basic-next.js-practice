@@ -6,16 +6,26 @@ const About = () => {
       <Head>
         <title>user list | About</title>
       </Head>
-      <h1>About page</h1>
-      <p>
+      <h1 className="title">About page</h1>
+      <p className="explain">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
         illo cum vero, ipsam qui, temporibus sequi ducimus tempora molestias
         animi pariatur, repudiandae debitis aspernatur quibusdam quisquam.
-        Architecto sapiente ut soluta.
+        Architecto sapiente ut soluta. temporibus sequi ducimus tempora
+        molestias animi pariatur, repudiandae debitis aspernatur quibusdam
+        quisquam. Architecto sapiente ut soluta.
       </p>
-      <p>
+      <p className="explain">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis
         illo cum vero, ipsam qui, temporibus sequi ducimus tempora molestias
+        animi pariatur, repudiandae debitis aspernatur quibusdam quisquam.
+        Architecto sapiente ut soluta.temporibus sequi ducimus tempora molestias
+        animi pariatur, repudiandae debitis aspernatur quibusdam quisquam.
+        Architecto sapiente ut soluta.temporibus sequi ducimus tempora molestias
+        animi pariatur, repudiandae debitis aspernatur quibusdam quisquam.
+        Architecto sapiente ut soluta.temporibus sequi ducimus tempora molestias
+        animi pariatur, repudiandae debitis aspernatur quibusdam quisquam.
+        Architecto sapiente ut soluta.temporibus sequi ducimus tempora molestias
         animi pariatur, repudiandae debitis aspernatur quibusdam quisquam.
         Architecto sapiente ut soluta.
       </p>

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import getUsers from "../../Services/getUsers";
+import styles from "../../styles/Users.module.scss";
 
 export const getStaticProps = async () => {
   try {
@@ -26,12 +27,12 @@ const Users = ({ users, error }) => {
         <title>user list | Users</title>
         <meta name="keywords" content="users" />
       </Head>
-      <h1>All users</h1>
+      <h1 className="title">All users</h1>
       <div>
         <ul>
           {!error && users ? (
             users.map((user) => (
-              <li key={user.id}>
+              <li className={styles.userItem} key={user.id}>
                 <Link href={`/users/${user.id}`}>
                   <a>{user.name}</a>
                 </Link>

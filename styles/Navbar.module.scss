@@ -1,0 +1,123 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: #fff;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+
+  @media screen and (max-width: 767px) {
+      flex-flow: column wrap;
+  }
+
+  .hambergure {
+    display: flex;
+    position: relative;
+   
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    } 
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: #67e8f9;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .hambergureMenuBtn {
+      width: 30px;
+      height: 30px;
+      border: none;
+      z-index: 999999;
+      right: 10px;
+
+      div {
+        background-color: #57534e;
+        width: 100%;
+        margin: 5px 0;
+        border-radius: 5px;
+        height: 3px;
+        transition: all .3s ease;
+      }
+
+      @media screen and (min-width: 767px) {
+        display: none;
+      }
+    }
+
+    .hambergureMenuBtnOpen {
+      div:first-child,
+      div:last-child {
+        background-color: #67e8f9;
+      }
+
+      div:first-child {
+        align-self: flex-start;
+        width: 50%;
+      }
+
+      div:last-child {
+        align-self: flex-end;
+        width: 70%;
+      }
+    }
+  }
+
+  
+  nav {
+      transition: all 0.5s ease;
+      flex: 1;
+      
+      @media screen and (max-width: 767px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(#fff, 0.8);
+          z-index: 9999;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                .link {
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                    margin-left: 0;
+                }
+            }
+            
+            .link {
+                &:not(:first-child) {
+                    margin-left: 5px;
+                }
+                
+                a {
+                    padding: 5px 15px;
+                    color: #57534e;
+                }
+            }
+            
+            .activeLink {
+                a {
+                    color: #67e8f9;
+                }
+            }
+        }
+    }
+
+    .openMenu {
+      left: 0;
+    }
+}
